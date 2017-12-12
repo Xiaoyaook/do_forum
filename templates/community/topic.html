@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block boardheader %}
+  <header>
+    <p>{{ post.title }}</p>
+  </header>
+{% endblock %}
+
+{% block main %}
+  <div>
+    {{ post.content }}
+  </div>
+  <div>
+    {% for comment in comments %}
+      <div>{{ comment.content }}</div>
+    {% empty %}
+      <div>没有评论</div>
+    {% endfor %}
+  </div>
+{% endblock %}

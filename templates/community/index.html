@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+  {% for board in boards %}
+    <a href="{{ board.get_absolute_url }}"><span>{{ board.name }}</span></a>
+  {% empty %}
+    <div class="no-post">暂时还没有board</div>
+  {% endfor %}
+{% endblock %}

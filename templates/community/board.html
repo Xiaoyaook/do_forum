@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block boardheader %}
+  <header class="board-header">
+    <p>{{ board_name }}</p>
+  </header>
+{% endblock %}
+{% block main %}
+  <ul>
+  {% for topic in topics %}
+    <li><a href="{{ topic.get_absolute_url }}"><span>{{ topic.title }}</span></a></li>
+  {% empty %}
+    <li>现在还没有帖子</li>
+  {% endfor %}
+  </ul>
+{% endblock %}

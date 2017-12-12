@@ -1,0 +1,42 @@
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1090px;
+    background-color: black;
+    height: 40px;
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.9);
+}
+
+body {
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.4;
+}
+
+.logo {
+    box-sizing: content-box;
+    padding: 0 12px;
+    height: 100%;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.board-header {
+    height: 110px;
+    margin-top: 50px;
+}
+
+.footer {
+    font-size: 11px;
+    line-height: 1.26666667;
+    color: #848d95;
+    background-color: #E1ECF4;
+    text-align: center;
+}

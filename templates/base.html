@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link rel="stylesheet" href="{% static 'community/css/main.css' %}">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="container level">
+      <div class="top-l level-left">
+        <div class="logo level-item">xiaoyaook</div>
+        <a href="#" class="home level-item button">Home</a>
+      </div>
+      <div class="top-r level-right">
+        <a href="#" class="login-link level-item button is-white">登录</a>
+        <a href="#" class="login-link level-item button is-link">注册</a>
+      </div>
+    </div>
+  </header>
+
+  {% block boardheader %}
+  <header class="board-header">
+    <p>主页</p>
+  </header>
+  {% endblock %}
+
+  <section class="main">
+    {% block main %}
+    {% endblock %}
+  </section>
+  <footer class="footer">
+    <p>基于Django的forum,<i> Write by Xiaoyaook.</i></p>
+  </footer>
+</body>
+</html>
